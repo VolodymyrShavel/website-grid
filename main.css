@@ -130,11 +130,6 @@
    text-align: center;
 }
 
-.key-feature {
-   /* width: 100%; */
-   /* vertical-align: top; */
-}
-
 .key-feature__image {
    background: #ffcede;
    width: 128px;
@@ -166,8 +161,9 @@
 
 .modal {
    position: fixed;
-   display: none;
-   flex-direction: column;
+   opacity: 0;
+   transform: translateY(-3rem);
+   transition: opacity 200ms ease-out 0.2s, transform 500ms ease-out;
    z-index: 30;
    top: 20%;
    left: 30%;

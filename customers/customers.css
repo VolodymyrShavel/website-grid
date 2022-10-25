@@ -10,7 +10,7 @@ main {
    width: 60%;
    max-width: 40rem;
    box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.4);
-   transform: skewX(20deg);
+   transform: skewX(20deg) perspective(1000px) rotateY(20deg);
    overflow: hidden;
 }
 
