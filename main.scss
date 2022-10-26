@@ -1,15 +1,6 @@
 /*@media 300px 769px 1000px*/
-$screen-width: 40rem;
 
-$dark-green: #0e4f1f;
-$plan-green: #19b84c;
-$light-green: #2ddf5c;
-$pinky: #ff1b68;
-$light-red: #ff5454;
-$plan-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-$size-default: 1rem;
-$size-smaller: 0.5rem;
-$plan-top-margin: $size-smaller 0;
+@import '_variables.scss';
 
 #product-overview {
    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent)
@@ -27,6 +18,11 @@ $plan-top-margin: $size-smaller 0;
    width: 100vw;
    height: 33vh;
    position: relative;
+
+   @media (min-width: $screen-width), (min-height: $screen-width) {
+      height: 40vh;
+      background-position: 50% 25%;
+   }
 }
 
 #product-overview h1 {
@@ -36,15 +32,8 @@ $plan-top-margin: $size-smaller 0;
    bottom: 5%;
    left: 3%;
    font-size: 1.6rem;
-}
 
-@media (min-width: $screen-width), (min-height: $screen-width) {
-   #product-overview {
-      height: 40vh;
-      background-position: 50% 25%;
-   }
-
-   #product-overview h1 {
+   @media (min-width: $screen-width), (min-height: $screen-width) {
       font-size: 3rem;
    }
 }
@@ -63,12 +52,23 @@ $plan-top-margin: $size-smaller 0;
    display: flex;
    flex-direction: column;
    height: 28rem;
+
+   @media (min-width: $screen-width) {
+      width: 30%;
+      margin: 0 2px;
+      min-width: 13rem;
+      max-width: 25rem;
+   }
 }
 
 .plan--highlited {
    background: $plan-green;
    color: white;
    height: 30rem;
+
+   @media (min-width: $screen-width) {
+      box-shadow: $plan-shadow;
+   }
 }
 
 .plan__annotation {
@@ -111,17 +111,6 @@ $plan-top-margin: $size-smaller 0;
       justify-content: center;
       align-items: center;
    }
-
-   .plan {
-      width: 30%;
-      margin: 0 2px;
-      min-width: 13rem;
-      max-width: 25rem;
-   }
-
-   .plan--highlited {
-      box-shadow: $plan-shadow;
-   }
 }
 
 #key-features {
@@ -140,6 +129,12 @@ $plan-top-margin: $size-smaller 0;
    margin: 0;
    padding: 0;
    text-align: center;
+
+   @media (min-width: $screen-width) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
 }
 
 .key-feature__image {
@@ -162,12 +157,6 @@ $plan-top-margin: $size-smaller 0;
    .key-feature {
       width: 30%;
       max-width: 25rem;
-   }
-
-   .key-feature__list {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
    }
 }
 
